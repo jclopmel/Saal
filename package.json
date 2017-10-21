@@ -1,0 +1,19 @@
+{
+  "name": "saal",
+  "version": "1.0.0",
+  "description": "Code test",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "file-system": "^2.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Carlos Lopez",
+  "license": "ISC"
+}
