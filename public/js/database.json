@@ -1,0 +1,79 @@
+{
+    "vehicles": [
+        {
+            "name": "Stelvio",
+            "description": "Red coloured fast vehicle",
+            "type": "Ford"
+        },
+        {
+            "name": "X5",
+            "description": "Green coloured slow vehicle",
+            "type": "Audi"
+        },
+        {
+            "name": "Picasso",
+            "description": "Yellow coloured slow vehicle",
+            "type": "Peugeot"
+        },
+        {
+            "name": "Stelvio",
+            "description": "Black coloured small vehicle",
+            "type": "Peugeot"
+        },
+        {
+            "name": "Vanquish",
+            "description": "White coloured fast vehicle",
+            "type": "Aston Martin"
+        },
+        {
+            "name": "X5",
+            "description": "Green coloured slow vehicle",
+            "type": "Aston Martin"
+        },
+        {
+            "name": "Vanquish",
+            "description": "Red coloured fast vehicle",
+            "type": "Audi"
+        },
+        {
+            "name": "Logan",
+            "description": "Black coloured small vehicle",
+            "type": "BMW"
+        },
+        {
+            "name": "Flying Spur",
+            "description": "Black coloured small vehicle",
+            "type": "Aston Martin"
+        },
+        {
+            "name": "Lexus",
+            "description": "Red coloured fast vehicle",
+            "type": "Ford"
+        },
+        {
+            "name": "A4",
+            "description": "Red coloured fast vehicle",
+            "type": "Ford"
+        },
+        {
+            "name": "Stelvio",
+            "description": "Red coloured fast vehicle",
+            "type": "Ford"
+        },
+        {
+            "name": "Logan",
+            "description": "Silvered coloured fast vehicle",
+            "type": "Audi"
+        },
+        {
+            "name": "Orlando",
+            "description": "Black coloured slow vehicle",
+            "type": "Peugeot"
+        },
+        {
+            "name": "MI COCHE NUEVO",
+            "description": "ESTE ES MI COCHE NUEVO",
+            "type": "car"
+        }
+    ]
+}
