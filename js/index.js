@@ -63,7 +63,7 @@ function openForm(data){														//Display the add or modify Forms
 
 function bdPost (){																	//Add a new Object to JSON
 		$.ajax({
-	    	url: "http://localhost:3000/",
+	    	url: "/",
 			method: "put",
 			dataType: "json",
 			data: {name: $("#nameholder").val(), description: $("#descriptionholder").val(), type: $("#typeholder").val()},
@@ -85,7 +85,7 @@ function bdGet (){
 function bdPatch (){																	//Patch the displayed object
 	$("#objectBox").empty();
 	$.ajax({
-		url: "http://localhost:3000/",
+		url: "/",
 	    method: "PATCH",
 	    dataType: "json",
 	    data: {position: position},
