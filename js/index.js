@@ -1,4 +1,66 @@
-var choice, resultsearch, position, vehicles;
+var user, historial,tirada = [];
+
+bdGet();
+
+function randomNumber(max){
+	return Math.floor(Math.random(1,max)*(max-1)+1);				//Random between 1 and max
+}
+
+var dado,cantidad;
+
+$("select").change(function (){
+	dado = $("#dado").val();
+});
+
+$("#tirar").click(function (){				//Al clicker envia dados y crea array
+	$("#result").empty();
+	cantidad = $("#cantidad").val();
+	$("#result").append("<h2>"+user+" ha tirado los dados: </h2><br>");
+	for (var i =0; i<cantidad ; i++) {
+		tirada.push(randomNumber(dado))
+		$("#result").append("<div class='dado col-md-1 text-center'><p>"+tirada[i]+"</p></div>");
+	}
+	bdPost (user,tirada);
+});
+
+$("#login > button").click(function (){				//crea user al clicker y expone el nombre
+	user = $("#mySearch").val();
+	$("#nombres").append("<button class='btn btn-default mg1'>"+user+"</button>");
+	$("#login").addClass("hide");
+	$("#diceTable").removeClass("hide");
+});
+
+function bdGet (){
+	$.getJSON( "js/database.json", function( data ) {									//Get JSON data
+		historial = data;
+		console.log(historial)
+	});
+	
+}
+
+function bdPost (data1,data2){																	//Add a new Object to JSON
+	var temp = {
+		"user": data1,
+		"tirada": data2
+	};
+	console.log("tempoal: "+JSON.stringify(temp));
+	historial.tiradas.push(temp);
+		$.ajax({
+	    	url: "/js/database.json",
+			method: "post",
+			dataType: "json",
+			data:temp,
+		    success: function(data){
+				console.log("success!", data);
+			}
+	});
+	//showResults();
+	bdGet();
+}
+
+
+
+/*var choice, resultsearch, position, vehicles;
 
 bdGet();
 
@@ -59,7 +121,7 @@ function openForm(data){														//Display the add or modify Forms
 	}
 }
 
-/*                                       ajax functions                                */
+/*                                       ajax functions                                
 
 function bdPost (){																	//Add a new Object to JSON
 		$.ajax({
@@ -75,12 +137,6 @@ function bdPost (){																	//Add a new Object to JSON
 	bdGet();
 }
 
-function bdGet (){
-	$.getJSON( "js/database.json", function( data ) {									//Get JSON data
-		vehicles = data.vehicles;
-
-	});
-}
 
 function bdPatch (){																	//Patch the displayed object
 	$("#objectBox").empty();
@@ -107,4 +163,4 @@ function bdPut (){																		//Modify an object in JSON
 			alert("An object must be selected");
 		}
 
-}
+}*/
